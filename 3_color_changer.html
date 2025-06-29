@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Color Changer</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 50px;
+      transition: background 0.5s ease;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 8px;
+      background: black;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #colorName {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>🎨 Click to Change Background Color</h2>
+  <button onclick="changeColor()">Change Color</button>
+  <p id="colorName">Current Color: #ffffff</p>
+  <script>
+    function changeColor() {
+      let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+      document.body.style.backgroundColor = randomColor;
+      document.getElementById("colorName").innerText = "Current Color: " + randomColor;
+    }
+  </script>
+</body>
+</html>

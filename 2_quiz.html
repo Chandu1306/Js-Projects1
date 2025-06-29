@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Game</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    h2 { color: darkblue; }
+    .question { margin-bottom: 15px; }
+    #score { font-size: 20px; font-weight: bold; color: green; }
+    button { margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h2>🎯 JavaScript Quiz Game</h2>
+  <div class="question">
+    <p>1. What is the full form of HTML?</p>
+    <input type="radio" name="q1" value="correct"> HyperText Markup Language<br>
+    <input type="radio" name="q1" value="wrong"> HighText Machine Language<br>
+  </div>
+  <div class="question">
+    <p>2. Which tag is used for JavaScript?</p>
+    <input type="radio" name="q2" value="correct"> &lt;script&gt;<br>
+    <input type="radio" name="q2" value="wrong"> &lt;js&gt;<br>
+  </div>
+  <div class="question">
+    <p>3. Which operator is used for 'equal to'?</p>
+    <input type="radio" name="q3" value="correct"> ==<br>
+    <input type="radio" name="q3" value="wrong"> =<br>
+  </div>
+  <button onclick="checkScore()">Submit</button>
+  <p id="score"></p>
+  <script>
+    function checkScore() {
+      let score = 0;
+      if (document.querySelector('input[name="q1"]:checked')?.value === "correct") score++;
+      if (document.querySelector('input[name="q2"]:checked')?.value === "correct") score++;
+      if (document.querySelector('input[name="q3"]:checked')?.value === "correct") score++;
+      let message = `Your Score: ${score}/3`;
+      if (score === 3) message += " 🎉 Excellent!";
+      else if (score === 2) message += " 👍 Good job!";
+      else message += " 😅 Try again!";
+      document.getElementById("score").innerText = message;
+    }
+  </script>
+</body>
+</html>

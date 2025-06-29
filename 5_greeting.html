@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Time Greeting</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 50px;
+      transition: background 0.5s;
+    }
+    #greet {
+      font-size: 28px;
+      font-weight: bold;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h2>⏰ Time-Based Greeting</h2>
+  <p id="greet">Checking time...</p>
+  <script>
+    let hour = new Date().getHours();
+    let greeting = "";
+    let bgColor = "";
+    if (hour >= 5 && hour < 12) {
+      greeting = "🌞 Good Morning, Bujji!";
+      bgColor = "#FFF176";
+    } else if (hour >= 12 && hour < 17) {
+      greeting = "🌤️ Good Afternoon, Boss!";
+      bgColor = "#FFD54F";
+    } else if (hour >= 17 && hour < 20) {
+      greeting = "🌇 Good Evening, Hero!";
+      bgColor = "#FFB74D";
+    } else {
+      greeting = "🌙 Good Night, Mass Bujji!";
+      bgColor = "#263238";
+      document.body.style.color = "white";
+    }
+    document.getElementById("greet").innerText = greeting;
+    document.body.style.backgroundColor = bgColor;
+  </script>
+</body>
+</html>

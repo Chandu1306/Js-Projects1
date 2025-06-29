@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Name Meaning App</title>
+  <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      padding-top: 50px;
+    }
+    input, button {
+      font-size: 18px;
+      padding: 10px;
+      margin: 10px;
+    }
+    #meaning {
+      font-size: 22px;
+      font-weight: bold;
+      color: darkgreen;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>🧙 Enter Your Name to Discover the Magic</h2>
+  <input type="text" id="nameInput" placeholder="Enter your name">
+  <button onclick="showMeaning()">Reveal Meaning</button>
+  <p id="meaning"></p>
+  <script>
+    function showMeaning() {
+      let name = document.getElementById("nameInput").value.trim().toLowerCase();
+      let result = document.getElementById("meaning");
+      switch (name) {
+        case "chandu":
+        case "chinthakindi":
+          result.innerText = "Chandu means Charming Leader 😎✨";
+          break;
+        case "loki":
+          result.innerText = "Loki means Mischievous Genius 🌀🔮";
+          break;
+        case "leo":
+          result.innerText = "Leo means Fierce and Bold 🐆🔥";
+          break;
+        case "vikram":
+          result.innerText = "Vikram means Fearless Hero 🔫🦸‍♂️";
+          break;
+        default:
+          result.innerText = "Hmm... Unique name! You’re one of a kind 🌟";
+      }
+    }
+  </script>
+</body>
+</html>
