@@ -8,7 +8,7 @@ function showMovie() {
     case "Leo":
       result.innerText = "🧊 Leo - Bloody Sweet and Stylish!";
       break;
-    case "Khaidhi":
+    case "Khaithi":
       result.innerText = "🔦 Khaithi - Intense and Raw!";
       break;
     default:
