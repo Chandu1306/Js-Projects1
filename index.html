@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LCU Fan Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎬 LCU Movie Fan Page</h1>
+    <img src="vikram.jpg" alt="Vikram" class="poster">
+    <p id="message">Select your favorite LCU Movie:</p>
+    
+    <select id="movieSelect" onchange="showMovie()">
+      <option value="">--Choose--</option>
+      <option value="Vikram">Vikram</option>
+      <option value="Leo">Leo</option>
+      <option value="Khaidhi">Khaidhi</option>
+    </select>
+
+    <p id="result"></p>
+    <audio autoplay loop>
+      <source src="bgmusic.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
